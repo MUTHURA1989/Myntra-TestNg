@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="none" name="Failed suite [Myntra]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.Myntra.rerun.Transformer"/>
+  </listeners>
+  <test name="Test">
+    <classes>
+      <class name="com.Myntra.Women"/>
+    </classes>
+  </test> <!-- Test -->
+  <test parallel="none" name="Test(failed)">
+    <classes>
+      <class name="com.Myntra.Women">
+        <methods>
+          <include name="women"/>
+          <include name="applicationLaunch"/>
+        </methods>
+      </class> <!-- com.Myntra.Women -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Myntra] -->
